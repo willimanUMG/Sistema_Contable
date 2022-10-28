@@ -51,6 +51,6 @@ export class AccountService {
 	logout() {
 		this.dialog.closeAll();
 		this.storageService.deleteAllStorage();
-		window.location.href = '../auth/login';
+		window.location.href = './auth/login';
 	}
 }
