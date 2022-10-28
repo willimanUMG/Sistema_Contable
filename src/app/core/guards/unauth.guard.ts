@@ -15,7 +15,7 @@ export class UnauthGuard implements CanActivate {
 			return true;
 		} else {
 			if (state.url !== '/auth/login') {
-				const returnUrl = state.url.split('/auth/login?returnUrl=').join('').split('%2F').join('/');
+				const returnUrl = state.url.split('auth/login?returnUrl=').join('').split('%2F').join('/');
 				this.router.navigate([returnUrl], {});
 				return false;
 			} else {

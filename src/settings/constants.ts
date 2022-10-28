@@ -32,7 +32,7 @@ export class AppMenu {
 					url: 'catalogos/cuentas',
 				},
 				{
-					nombre: 'Clentes',
+					nombre: 'Clientes',
 					url: 'catalogos/clientes',
 				},
 				{

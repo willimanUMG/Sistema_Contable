@@ -52,18 +52,18 @@ export class HeaderComponent implements OnInit {
 
 
 	@HostListener('window:scroll', ['$event']) onscroll() {
-		// const mainHeight = window.innerHeight;
-		// const bodyContentHeight = document.getElementById('body-content').clientHeight;
+		const mainHeight = window.innerHeight;
+		const bodyContentHeight = document.getElementById('body-content').clientHeight;
 
-		// if (
-		// 	mainHeight - (70 + 51) < bodyContentHeight &&
-		// 	document.getElementsByClassName('cdk-overlay-pane').length === 0
-		// ) {
-		// 	this.navbarFixed = window.scrollY > 0;
-		// } else {
-		// 	this.navbarFixed = false;
-		// }
+		if (
+			mainHeight - (70 + 51) < bodyContentHeight &&
+			document.getElementsByClassName('cdk-overlay-pane').length === 0
+		) {
+			this.navbarFixed = window.scrollY > 0;
+		} else {
+			this.navbarFixed = false;
+		}
 
-		// this.callback.emit(this.navbarFixed);
+		this.callback.emit(this.navbarFixed);
 	}
 }
