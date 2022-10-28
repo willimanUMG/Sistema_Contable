@@ -18,14 +18,14 @@ export class IndexGuard implements CanActivate {
 		const login: Login = this.utilsService.getLogin();
 		// Si no ha iniciado sesion redirigue para que inicie
 		if (!login) {
-			if (state.url.includes('../auth/login')) {
+			if (state.url.includes('/auth/login')) {
 				return true;
 			} else {
-				this.router.navigate(['../auth/login'], {});
+				this.router.navigate(['/auth/login'], {});
 				return false;
 			}
 		} else {
-			this.router.navigate(['workspace/dashboard'], {});
+			this.router.navigate(['/workspace/dashboard'], {});
 			return false;
 		}
 	}

@@ -14,12 +14,12 @@ export class UnauthGuard implements CanActivate {
 		if (!login) {
 			return true;
 		} else {
-			if (state.url !== '../auth/login') {
-				const returnUrl = state.url.split('../auth/login?returnUrl=').join('').split('%2F').join('/');
+			if (state.url !== '/auth/login') {
+				const returnUrl = state.url.split('/auth/login?returnUrl=').join('').split('%2F').join('/');
 				this.router.navigate([returnUrl], {});
 				return false;
 			} else {
-				this.router.navigate(['../'], {});
+				this.router.navigate(['./'], {});
 				return false;
 			}
 		}
